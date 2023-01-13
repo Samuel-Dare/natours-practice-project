@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.header-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgb(40, 180, 133, 0.8)
+    ),
+    url("Sam Dee.jpeg");
+  height: 95vh;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+}
+.text-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header-text {
+  text-transform: uppercase;
+  color: #fff;
+  backface-visibility: hidden;
+  margin-bottom: 2.5rem;
+}
+.text-big {
+  display: block;
+  font-size: 40px;
+  letter-spacing: 30px;
+
+  animation: moveInLeft 1s ease-out;
+}
+.text-small {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 9px;
+
+  animation: moveInRight 1s ease-out;
+}
+
+img {
+  width: 6rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 20px;
+  transition: all 1s;
+  position: relative;
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
+
+  animation: moveInBottom 1s ease-out;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  background-color: red;
+  z-index: -1;
+}
+.btn-white::after {
+  background-color: #fff;
+}
+.btn:hover::after {
+  transform: scaleX(1.3) scaleY(1.4);
+  opacity: 0;
+}
+.btn-animated {
+  animation: moveInBottom 1s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14;
+  font-weight: 400;
+  padding: 15px;
+}
+.header-box {
+  height: 95vh;
+  background: linear-gradient(rgb(126, 213, 111, 0.8), rgb(40, 180, 133, 0.8)),
+    url(Sam\ Dee.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0% 100%);
+  position: relative;
+}
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-text {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 35px;
+  color: beige;
+  font-weight: 850;
+  font-size: 47px;
+  height: 60px;
+}
+.sub-text {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: beige;
+  font-weight: 600;
+  font-size: 30px;
+  padding-left: 10px;
+}
+.logo-box {
+}
+.logo {
+  height: 22px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.btn-box {
+}
+.btn {
+  position: relative;
+}
+.btn-white {
+  text-align: center;
+} */
